@@ -1,0 +1,167 @@
+html {
+  box-sizing: border-box;
+  width: 100%;
+  height: 100%;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+  padding: 0;
+  margin: 0;
+}
+body {
+  font-family: sans-serif;
+  height: 100%;
+  margin: 0;
+  background: #151927;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+h2 {
+  color: #278f8b;
+  text-align: center;
+  font-size: 40px;
+  margin: 20px;
+  transform: rotate(-20deg);
+  -webkit-box-shadow: -48px 3px 8px 15px rgba(32, 159, 126, 0.03);
+  -moz-box-shadow: -48px 3px 8px 15px rgba(32, 159, 126, 0.03);
+  box-shadow: -48px 3px 8px 15px rgba(32, 159, 126, 0.03);
+  border-radius: 20px;
+}
+main {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 420px;
+  max-width: 768px;
+  margin: 0 auto;
+  font-family: monospace, sans-serif;
+  font-size: 22px;
+  transform: rotate(-20deg);
+}
+main label {
+  display: block;
+}
+main input[type="range"] {
+  display: block;
+  margin-bottom: 10px;
+  width: 200px;
+  cursor: pointer;
+}
+section.settings {
+  width: 50%;
+  z-index: 2;
+}
+#app {
+  z-index: 1000;
+  background-color: rgba(39, 40, 37, 0.9);
+  padding: 80px;
+  border-radius: 20px;
+  transform: rotate(20deg);
+}
+.output {
+  z-index: 3;
+}
+.box-container {
+  padding: 50px;
+  border: 2px solid #278f8b;
+  z-index: 5;
+  border-radius: 20px;
+}
+.box {
+  width: 150px;
+  height: 150px;
+  /* background: #3ed5a8;
+  border-radius: 20px; */
+}
+
+.container {
+  border: 2px dotted white;
+  transform-style: preserve-3d;
+  animation: rotate 10s infinite linear;
+  -webkit-box-shadow: 28px 25px 87px 73px rgba(235, 241, 246, 0.2);
+  -moz-box-shadow: 28px 25px 87px 73px rgba(235, 241, 246, 0.2);
+  box-shadow: 28px 25px 87px 73px rgba(235, 241, 246, 0.2);
+}
+
+.container:before,
+.container:after {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 7em;
+  height: 7em;
+  border: 2px dotted white;
+}
+.container:before {
+  transform: rotateX(90deg);
+}
+.container:after {
+  transform: rotatey(90deg);
+}
+
+.side {
+  position: absolute;
+  width: 7em;
+  height: 7em;
+  border: 2px solid white;
+  opacity: 0.7;
+  -webkit-box-shadow: 28px 25px 87px 73px rgba(235, 241, 246, 0.2);
+  -moz-box-shadow: 28px 25px 87px 73px rgba(235, 241, 246, 0.2);
+  box-shadow: 28px 25px 87px 73px rgba(235, 241, 246, 0.2);
+}
+
+.back {
+  transform: translateZ(-5em);
+  background: orange;
+}
+
+.left {
+  transform: translateX(-5em) rotateY(90deg);
+  background: lightgreen;
+}
+
+.right {
+  transform: translateX(5em) rotateY(90deg);
+  background: yellowgreen;
+}
+.top {
+  transform: translateY(-5em) rotateX(90deg);
+  background: skyblue;
+}
+
+.bottom {
+  transform: translateY(5em) rotateX(90deg);
+  background: steelblue;
+}
+
+.front {
+  transform: translateZ(5em);
+  background: gold;
+}
+
+button {
+  background-color: #245f4d;
+  color: #fff;
+  display: inline-block;
+  font-size: 20px;
+  padding: 10px;
+  outline: none;
+  border: none;
+  margin-right: 10px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+label {
+  color: #fff;
+}
+
+hr {
+  margin: 20px 0;
+}
